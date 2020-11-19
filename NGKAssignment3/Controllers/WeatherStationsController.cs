@@ -48,7 +48,18 @@ namespace NGKAssignment3.Controllers
         {
             return View();
         }
-
+        public IActionResult SelectDate()
+        {
+            return View();
+        }
+        public async Task<IActionResult> ThreeLatestWeatherData()
+        {
+            return View(await _context.WeatherStations.ToListAsync());
+        }
+        public async Task<IActionResult> List()
+        {
+            return View(await _context.WeatherStations.ToListAsync());
+        }
         // POST: WeatherStations/Create
         // To protect from overposting attacks, enable the specific properties you want to bind to, for 
         // more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
