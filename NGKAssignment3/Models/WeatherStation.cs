@@ -7,13 +7,14 @@ namespace NGKAssignment3.Models
 {
     public class WeatherStation
     {
-        public WeatherStation(string name, int lat, int lon)
+        /*public WeatherStation(string name, int lat, int lon)
         {
             Name = name;
             Lat = lat;
             Lon = lon;
         }
-
+        */
+        public long WeatherStationId {get; set;}
         public string Name{ get; set;}
         public int Lat { get; set; }
         public int Lon { get; set; }
