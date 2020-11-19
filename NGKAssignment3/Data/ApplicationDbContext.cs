@@ -14,5 +14,11 @@ namespace NGKAssignment3.Data
         {
         }
         public DbSet<WeatherStation> WeatherStations { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            builder.Entity<WeatherStation>().ToTable("Weatherstation");
+        }
     }
+
 }
