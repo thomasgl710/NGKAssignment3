@@ -13,6 +13,12 @@ namespace NGKAssignment3.Data
             : base(options)
         {
         }
-        public DbSet<NGKAssignment3.Models.WeatherStation> WeatherStations { get; set; }
+        public DbSet<WeatherStation> WeatherStations { get; set; }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            builder.Entity<WeatherStation>().ToTable("Weatherstation");
+        }
     }
+
 }
