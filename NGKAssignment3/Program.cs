@@ -22,5 +22,6 @@ namespace NGKAssignment3
                 {
                     webBuilder.UseStartup<Startup>();
                 });
+
     }
 }
