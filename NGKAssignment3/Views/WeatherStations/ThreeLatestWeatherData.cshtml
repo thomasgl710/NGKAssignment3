@@ -8,6 +8,7 @@
         <tr>
             <th>
                 @Html.DisplayNameFor(model => model.Name)
+                
             </th>
             <th>
                 @Html.DisplayNameFor(model => model.Lat)
@@ -63,6 +64,6 @@
                         <a asp-action="Delete" asp-route-id="@item.WeatherStationId">Delete</a>
                     </td>
                 </tr>
-            }
-        </tbody>
+         }
+    </tbody>
 </table>
