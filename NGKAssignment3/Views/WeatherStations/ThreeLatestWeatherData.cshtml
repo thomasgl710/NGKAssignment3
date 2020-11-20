@@ -29,11 +29,11 @@
                 @Html.DisplayNameFor(model => model.AirPressure)
             </th>
             <th></th>
-        </tr>
+        </tr>   
     </thead>
     <tbody>
 
-        @foreach (var item in Model)
+        @foreach (var item in Model.OrderBy(o=> o.Time).TakeLast(3).ToList())
         { 
 
                 <tr>
