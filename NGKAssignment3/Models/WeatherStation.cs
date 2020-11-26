@@ -16,8 +16,14 @@ namespace NGKAssignment3.Models
         */
         public long WeatherStationId {get; set;}
         public string Name{ get; set;}
-        public int Lat { get; set; }
-        public int Lon { get; set; }
+        public void Place(string name, double lat, double lon)
+        {
+            Name = name;
+            Lat = lat;
+            Lon = lon;
+        }
+        public double Lat { get; set; }
+        public double Lon { get; set; }
         public DateTime Time { get; set; }
         public float Temperatur { get; set; }
         public int Humidity { get; set; }
